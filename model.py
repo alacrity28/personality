@@ -85,12 +85,20 @@ class model(object):
 
 
     def svd(self, factors = 5, top_questions = 10):
-        nmf = TruncatedSVD(n_components = factors)
-        W_nmf = nmf.fit_transform(self.answers_clean)
-        H_nmf = nmf.components_
-        self.describe_nmf_results(W_nmf, H_nmf, top_questions)
-        #return self.reconst_mse(self.answers_clean, W_nmf, H_nmf)
-        return W_nmf, H_nmf, nmf
+        svd = TruncatedSVD(n_components = factors)
+        W = svd.fit_transform(self.answers_clean)
+        H = svd.components_
+        var_ratio = svd.explained_variance_ratio_
+        var = svd.explained_variance_
+        self.describe_svd_results(W, H, top_questions)
+        return W, H, var_ratio, var
+
+    def describe_svd_results(self, W, H, top_questions = 10):
+        print("Reconstruction error: %f") %(self.reconst_mse(self.answers_clean, W, H))
+        for topic_num, topic in enumerate(H):
+            print("Topic %d:" % topic_num)
+            print [self.questions.loc[i]['Description'] for i in topic.argsort()[:-top_questions - 1:-1]]
+            print [self.questions.loc[i]['Field'] for i in topic.argsort()[:-top_questions - 1:-1]]
 
     #kmeans
     def kmeans(self, clusters = 5):
@@ -126,13 +134,6 @@ class model(object):
         cPickle.dump( nmf_16, open( "data/clean_data/nmf_16.p", "wb" ) )
 
         print "The pickling is complete! Yummy!"
-
-
-
-
-
-
-
 
 
 '''
