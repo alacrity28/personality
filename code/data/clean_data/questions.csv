@@ -1,0 +1,164 @@
+,Field,Description,Trait_Letter,Trait,Coding
+0,A1,I know how to comfort others,A,Warmth,1
+1,A2,I enjoy bringing people together,A,Warmth,1
+2,A3,I feel others' emotions,A,Warmth,1
+3,A4,I take an interest in other people's lives,A,Warmth,1
+4,A5,I cheer people up,A,Warmth,1
+5,A6,I make people feel at ease,A,Warmth,1
+6,A7,I take time out for others,A,Warmth,1
+7,A8,I don't like to get involved in other people's problems,A,Warmth,0
+8,A9,I am not really interested in others,A,Warmth,0
+9,A10,I try not to think about the needy,A,Warmth,0
+10,B1,I make insightful remarks,B,Reasoning,1
+11,B2,I know the answers to many questions,B,Reasoning,1
+12,B3,I tend to analyze things,B,Reasoning,1
+13,B4,I use my brain,B,Reasoning,1
+14,B5,I learn quickly,B,Reasoning,1
+15,B6,I counter others' arguments,B,Reasoning,1
+16,B7,I reflect on things before acting,B,Reasoning,1
+17,B8,I weigh the pros against the cons,B,Reasoning,1
+18,B9,I consider myself an average person,B,Reasoning,0
+19,B10,I get confused easily,B,Reasoning,0
+20,B11,I know that I am not a special person,B,Reasoning,0
+21,B12,I have a poor vocabulary,B,Reasoning,0
+22,B13,I skip difficult words while reading,B,Reasoning,0
+23,C1,I seldom feel blue,C,Emotional Stability,1
+24,C2,I feel comfortable with myself,C,Emotional Stability,1
+25,C3,I readily overcome setbacks,C,Emotional Stability,1
+26,C4,I am relaxed most of the time,C,Emotional Stability,1
+27,C5,I am not easily frustrated,C,Emotional Stability,1
+28,C6,I have frequent mood swings,C,Emotional Stability,0
+29,C7,I often feel blue,C,Emotional Stability,0
+30,C8,I dislike myself,C,Emotional Stability,0
+31,C9,I feel desperate,C,Emotional Stability,0
+32,C10,I am easily discouraged,C,Emotional Stability,0
+33,D1,I take charge,D,Dominance,1
+34,D2,I want to be in charge,D,Dominance,1
+35,D3,I say what I think,D,Dominance,1
+36,D4,I am not afraid of providing criticism,D,Dominance,1
+37,D5,I take control of things,D,Dominance,1
+38,D6,I can take strong measures,D,Dominance,1
+39,D7,I wait for others to lead the way,D,Dominance,0
+40,D8,I never challenge things,D,Dominance,0
+41,D9,I let others make the decisions,D,Dominance,0
+42,D10,I let myself be pushed around,D,Dominance,0
+43,E1,I am the life of the party,E,Liveliness,1
+44,E2,I love large parties,E,Liveliness,1
+45,E3,I joke around a lot,E,Liveliness,1
+46,E4,I enjoy being part of a loud crowd,E,Liveliness,1
+47,E5,I amuse my friends,E,Liveliness,1
+48,E6,I act wild and crazy,E,Liveliness,1
+49,E7,I seldom joke around,E,Liveliness,0
+50,E8,I don't like crowded events,E,Liveliness,0
+51,E9,I am the last to laugh at a joke,E,Liveliness,0
+52,E10,I dislike loud music,E,Liveliness,0
+53,F1,I believe laws should be strictly enforced,F,Rule-Consciousness,1
+54,F2,I try to follow the rules,F,Rule-Consciousness,1
+55,F3,I believe in one true religion,F,Rule-Consciousness,1
+56,F4,I respect authority,F,Rule-Consciousness,1
+57,F5,I like to stand during the national anthem,F,Rule-Consciousness,1
+58,F6,I resist authority,F,Rule-Consciousness,0
+59,F7,I break rules,F,Rule-Consciousness,0
+60,F8,I use swear words,F,Rule-Consciousness,0
+61,F9,I oppose authority,F,Rule-Consciousness,0
+62,F10,I know how to get around the rules,F,Rule-Consciousness,0
+63,G1,I feel comfortable around people,G,Social Boldness,1
+64,G2,I talk to a lot of different people at parties,G,Social Boldness,1
+65,G3,I don't mind being the center of attention,G,Social Boldness,1
+66,G4,I make friends easily,G,Social Boldness,1
+67,G5,I start conversations,G,Social Boldness,1
+68,G6,I find it difficult to approach others,G,Social Boldness,0
+69,G7,I often feel uncomfortable around others,G,Social Boldness,0
+70,G8,I have little to say,G,Social Boldness,0
+71,G9,I am quiet around strangers,G,Social Boldness,0
+72,G10,I keep in the background,G,Social Boldness,0
+73,H1,I like to read,H,Sensitivity,1
+74,H2,I enjoy discussing movies and books with others,H,Sensitivity,1
+75,H3,I read a lot,H,Sensitivity,1
+76,H4,I don't like action movies,H,Sensitivity,1
+77,H5,I cry during movies,H,Sensitivity,1
+78,H6,I love flowers,H,Sensitivity,1
+79,H7,I do not enjoy watching dance performances,H,Sensitivity,0
+80,H8,I do not like poetry,H,Sensitivity,0
+81,H9,I dislike works of fiction,H,Sensitivity,0
+82,H10,I rarely notice my emotional reactions,H,Sensitivity,0
+83,I1,I find it hard to forgive others,I,Vigilance,1
+84,I2,I suspect hidden motives in others,I,Vigilance,1
+85,I3,I am wary of others,I,Vigilance,1
+86,I4,I distrust people,I,Vigilance,1
+87,I5,I believe that people seldom tell you the whole truth,I,Vigilance,1
+88,I6,I believe that people are essentially evil,I,Vigilance,1
+89,I7,I trust what people say,I,Vigilance,0
+90,I8,I trust others,I,Vigilance,0
+91,I9,I believe that others have good intentions,I,Vigilance,0
+92,I10,I believe that people are basically moral,I,Vigilance,0
+93,J1,I do things that others find strange,J,Abstractedness,1
+94,J2,I like to get lost in thought,J,Abstractedness,1
+95,J3,I enjoy wild flights of fantasy,J,Abstractedness,1
+96,J4,I love to daydream,J,Abstractedness,1
+97,J5,I swim against the current,J,Abstractedness,1
+98,J6,I take deviant positions,J,Abstractedness,1
+99,J7,I do unexpected things,J,Abstractedness,1
+100,J8,I do things by the book,J,Abstractedness,0
+101,J9,I seldom daydream,J,Abstractedness,0
+102,J10,I seldom get lost in thought,J,Abstractedness,0
+103,K1,I reveal little about myself,K,Privateness,1
+104,K2,I am hard to get to know,K,Privateness,1
+105,K3,I don't talk a lot,K,Privateness,1
+106,K4,I bottle up my feelings,K,Privateness,1
+107,K5,I keep my thoughts to myself,K,Privateness,1
+108,K6,I am open about myself to others,K,Privateness,0
+109,K7,I am open about my feelings,K,Privateness,0
+110,K8,I disclose my intimate thoughts,K,Privateness,0
+111,K9,I show my feelings,K,Privateness,0
+112,K10,I am willing to talk about myself,K,Privateness,0
+113,L1,I am afraid that I will do the wrong thing,L,Apprehension,1
+114,L2,I feel threatened easily,L,Apprehension,1
+115,L3,I am easily hurt,L,Apprehension,1
+116,L4,I worry about things,L,Apprehension,1
+117,L5,I spend time thinking about past mistakes,L,Apprehension,1
+118,L6,I feel guilty when I say 'no',L,Apprehension,1
+119,L7,I feel crushed by setbacks,L,Apprehension,1
+120,L8,I don't worry about things that have already happened,L,Apprehension,1
+121,L9,I am not easily bothered by things,L,Apprehension,0
+122,L10,I don't let others discourage me,L,Apprehension,0
+123,M1,I believe in the importance of art,M,Openness to Change,1
+124,M2,I love to think up new ways of doing things,M,Openness to Change,1
+125,M3,I enjoy hearing new ideas,M,Openness to Change,1
+126,M4,I carry the conversation to a higher level,M,Openness to Change,1
+127,M5,I prefer variety to routine,M,Openness to Change,1
+128,M6,I avoid philosophical discussions,M,Openness to Change,0
+129,M7,I rarely look for a deeper meaning in things,M,Openness to Change,0
+130,M8,I am not interested in theoretical discussions,M,Openness to Change,0
+131,M9,I am not interested in abstract ideas,M,Openness to Change,0
+132,M10,I try to avoid complex people,M,Openness to Change,0
+133,N1,I want to be left alone,N,Self-Reliance,1
+134,N2,I prefer to do things by myself,N,Self-Reliance,1
+135,N3,I enjoy spending time by myself,N,Self-Reliance,1
+136,N4,I seek quiet,N,Self-Reliance,1
+137,N5,I don't mind eating alone,N,Self-Reliance,1
+138,N6,I enjoy silence,N,Self-Reliance,1
+139,N7,I enjoy my privacy,N,Self-Reliance,1
+140,N8,I enjoy being part of a group,N,Self-Reliance,0
+141,N9,I enjoy teamwork,N,Self-Reliance,0
+142,N10,I can't do without the company of others,N,Self-Reliance,0
+143,O1,I want everything to be 'just right',O,Perfectionism,1
+144,O2,I get chores done right away,O,Perfectionism,1
+145,O3,I like order,O,Perfectionism,1
+146,O4,I continue until everything is perfect,O,Perfectionism,1
+147,O5,I am exacting in my work,O,Perfectionism,1
+148,O6,I am not bothered by messy people,O,Perfectionism,0
+149,O7,I am not bothered by disorder,O,Perfectionism,0
+150,O8,I leave a mess in my room,O,Perfectionism,0
+151,O9,I leave my belongings around,O,Perfectionism,0
+152,O10,I put off unpleasant tasks,O,Perfectionism,0
+153,P1,I get irritated easily,P,Tension,1
+154,P2,I get angry easily,P,Tension,1
+155,P3,I am quick to judge others,P,Tension,1
+156,P4,I am annoyed by others' mistakes,P,Tension,1
+157,P5,I am easily put out,P,Tension,1
+158,P6,I can't stand being contradicted,P,Tension,1
+159,P7,I judge people by their appearance,P,Tension,1
+160,P8,I am not easily annoyed,P,Tension,0
+161,P9,I try to forgive and forget,P,Tension,0
+162,P10,I have a good word for everyone.,P,Tension,0

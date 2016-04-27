@@ -1,0 +1,93 @@
+import numpy as np
+import pandas as pd
+from collections import defaultdict
+import matplotlib.pyplot as plt
+%matplotlib inline
+from sklearn.decomposition import NMF
+from sklearn.decomposition import ProjectedGradientNMF
+from numpy import array, matrix, linalg
+from sklearn.metrics import mean_squared_error
+from sklearn.decomposition import TruncatedSVD
+from scipy.linalg import svd
+
+
+data = pd.read_csv('data/16PF/data.csv', delimiter = "\t")
+
+
+#This test shows that every question on every test included has been filled out, meaning that there is no missing data
+temp = data.describe().iloc[0]
+temp[temp != 49159]
+
+data2 = pd.read_csv('data/16PF/questions', sep='\t')
+
+questions_raw = data2[0:162][['Field','Description']]
+questions_raw['Description'] = questions_raw['Description'].apply(lambda x: x.split(" rated")[0])
+questions = questions_raw.set_index(questions_raw['Field'])['Description'].apply(lambda x: x.split(" rated")[0])
+questions = pd.DataFrame(questions)
+
+
+def change_trait(x):
+    if x == 'A':
+        return "Warmth"
+    if x == 'B':
+        return "Reasoning"
+    if x == 'C':
+        return "Emotional Stability"
+    if x == 'D':
+        return "Dominance"
+    if x == 'E':
+        return "Liveliness"
+    if x == 'F':
+        return "Rule-Consciousness"
+    if x == 'G':
+        return "Social Boldness"
+    if x == 'H':
+        return "Sensitivity"
+    if x == 'I':
+        return "Vigilance"
+    if x == 'J':
+        return "Abstractedness"
+    if x == 'K':
+        return "Privateness"
+    if x == 'L':
+        return "Apprehension"
+    if x == 'M':
+        return "Openness to Change"
+    if x == 'N':
+        return "Self-Reliance"
+    if x == 'O':
+        return "Perfectionism"
+    if x == 'P':
+        return "Tension"
+
+
+category_columns = [x[0] for x in data.columns[:163]
+
+trait_pre1 = pd.DataFrame(category_columns, columns = ['trait_letter'], index = data.columns[0:163])
+questions['Trait'] = trait_pre1.applymap(lambda x: change_trait(x))
+questions['Trait_Letter'] = trait_pre1
+questions = questions[:-1]
+questions.head()
+
+questions2 = questions_pre1['Description'].apply(lambda x: x.split(" rated")[0])
+trait_pre1 = pd.DataFrame(category_columns, columns = ['trait_letter'], index = data.columns[0:163])
+
+
+country = pd.read_csv('data/16PF/country', sep='\t', delimiter = ",", dtype = {"Code": np.str, "Country": np.str}) #index_col = 'Code'
+
+country_dict = {}
+for i in country.iterrows():
+    country_dict[i[1][0]] = i[1][1]
+country_dict['FX'] = 'France, Metropolitan'
+
+data['country_name'] = data['country'].apply(lambda x: country_dict[x])    #trait_pre1.applymap(lambda x: change_trait(x))
+
+questions_dict = {}
+for i in questions.iterrows():
+    questions_dict[i[1][1].lower()] = i[1][2]
+
+def pull_factors(df, col_name):
+    len_ = len(col_name)
+    check_value = questions_dict[col_name.lower()] if len_ > 1 else col_name
+    good_cols = [col for col in df.columns if col[0] == check_value]
+    return df[good_cols]

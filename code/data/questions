@@ -1,0 +1,424 @@
+Field	Format	Description
+A1	INTEGER	"I know how to comfort others" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+A2	INTEGER	"I enjoy bringing people together" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+A3	INTEGER	"I feel others' emotions" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+A4	INTEGER	"I take an interest in other people's lives" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+A5	INTEGER	"I cheer people up" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+A6	INTEGER	"I make people feel at ease" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+A7	INTEGER	"I take time out for others" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+A8	INTEGER	"I don't like to get involved in other people's problems" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+A9	INTEGER	"I am not really interested in others" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+A10	INTEGER	"I try not to think about the needy" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+B1	INTEGER	"I make insightful remarks" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+B2	INTEGER	"I know the answers to many questions" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+B3	INTEGER	"I tend to analyze things" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+B4	INTEGER	"I use my brain" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+B5	INTEGER	"I learn quickly" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+B6	INTEGER	"I counter others' arguments" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+B7	INTEGER	"I reflect on things before acting" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+B8	INTEGER	"I weigh the pros against the cons" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+B9	INTEGER	"I consider myself an average person" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+B10	INTEGER	"I get confused easily" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+B11	INTEGER	"I know that I am not a special person" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+B12	INTEGER	"I have a poor vocabulary" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+B13	INTEGER	"I skip difficult words while reading" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+C1	INTEGER	"I seldom feel blue" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+C2	INTEGER	"I feel comfortable with myself" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+C3	INTEGER	"I readily overcome setbacks" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+C4	INTEGER	"I am relaxed most of the time" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+C5	INTEGER	"I am not easily frustrated" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+C6	INTEGER	"I have frequent mood swings" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+C7	INTEGER	"I often feel blue" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+C8	INTEGER	"I dislike myself" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+C9	INTEGER	"I feel desperate" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+C10	INTEGER	"I am easily discouraged" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+D1	INTEGER	"I take charge" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+D2	INTEGER	"I want to be in charge" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+D3	INTEGER	"I say what I think" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+D4	INTEGER	"I am not afraid of providing criticism" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+D5	INTEGER	"I take control of things" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+D6	INTEGER	"I can take strong measures" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+D7	INTEGER	"I wait for others to lead the way" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+D8	INTEGER	"I never challenge things" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+D9	INTEGER	"I let others make the decisions" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+D10	INTEGER	"I let myself be pushed around" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+E1	INTEGER	"I am the life of the party" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+E2	INTEGER	"I love large parties" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+E3	INTEGER	"I joke around a lot" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+E4	INTEGER	"I enjoy being part of a loud crowd" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+E5	INTEGER	"I amuse my friends" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+E6	INTEGER	"I act wild and crazy" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+E7	INTEGER	"I seldom joke around" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+E8	INTEGER	"I don't like crowded events" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+E9	INTEGER	"I am the last to laugh at a joke" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+E10	INTEGER	"I dislike loud music" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+F1	INTEGER	"I believe laws should be strictly enforced" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+F2	INTEGER	"I try to follow the rules" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+F3	INTEGER	"I believe in one true religion" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+F4	INTEGER	"I respect authority" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+F5	INTEGER	"I like to stand during the national anthem" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+F6	INTEGER	"I resist authority" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+F7	INTEGER	"I break rules" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+F8	INTEGER	"I use swear words" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+F9	INTEGER	"I oppose authority" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+F10	INTEGER	"I know how to get around the rules" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+G1	INTEGER	"I feel comfortable around people" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+G2	INTEGER	"I talk to a lot of different people at parties" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+G3	INTEGER	"I don't mind being the center of attention" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+G4	INTEGER	"I make friends easily" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+G5	INTEGER	"I start conversations" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+G6	INTEGER	"I find it difficult to approach others" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+G7	INTEGER	"I often feel uncomfortable around others" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+G8	INTEGER	"I have little to say" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+G9	INTEGER	"I am quiet around strangers" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+G10	INTEGER	"I keep in the background" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+H1	INTEGER	"I like to read" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+H2	INTEGER	"I enjoy discussing movies and books with others" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+H3	INTEGER	"I read a lot" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+H4	INTEGER	"I don't like action movies" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+H5	INTEGER	"I cry during movies" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+H6	INTEGER	"I love flowers" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+H7	INTEGER	"I do not enjoy watching dance performances" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+H8	INTEGER	"I do not like poetry" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+H9	INTEGER	"I dislike works of fiction" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+H10	INTEGER	"I rarely notice my emotional reactions" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+I1	INTEGER	"I find it hard to forgive others" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+I2	INTEGER	"I suspect hidden motives in others" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+I3	INTEGER	"I am wary of others" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+I4	INTEGER	"I distrust people" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+I5	INTEGER	"I believe that people seldom tell you the whole truth" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+I6	INTEGER	"I believe that people are essentially evil" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+I7	INTEGER	"I trust what people say" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+I8	INTEGER	"I trust others" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+I9	INTEGER	"I believe that others have good intentions" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+I10	INTEGER	"I believe that people are basically moral" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+J1	INTEGER	"I do things that others find strange" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+J2	INTEGER	"I like to get lost in thought" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+J3	INTEGER	"I enjoy wild flights of fantasy" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+J4	INTEGER	"I love to daydream" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+J5	INTEGER	"I swim against the current" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+J6	INTEGER	"I take deviant positions" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+J7	INTEGER	"I do unexpected things" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+J8	INTEGER	"I do things by the book" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+J9	INTEGER	"I seldom daydream" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+J10	INTEGER	"I seldom get lost in thought" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+K1	INTEGER	"I reveal little about myself" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+K2	INTEGER	"I am hard to get to know" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+K3	INTEGER	"I don't talk a lot" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+K4	INTEGER	"I bottle up my feelings" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+K5	INTEGER	"I keep my thoughts to myself" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+K6	INTEGER	"I am open about myself to others" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+K7	INTEGER	"I am open about my feelings" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+K8	INTEGER	"I disclose my intimate thoughts" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+K9	INTEGER	"I show my feelings" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+K10	INTEGER	"I am willing to talk about myself" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+L1	INTEGER	"I am afraid that I will do the wrong thing" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+L2	INTEGER	"I feel threatened easily" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+L3	INTEGER	"I am easily hurt" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+L4	INTEGER	"I worry about things" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+L5	INTEGER	"I spend time thinking about past mistakes" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+L6	INTEGER	"I feel guilty when I say 'no'" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+L7	INTEGER	"I feel crushed by setbacks" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+L8	INTEGER	"I don't worry about things that have already happened" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+L9	INTEGER	"I am not easily bothered by things" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+L10	INTEGER	"I don't let others discourage me" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+M1	INTEGER	"I believe in the importance of art" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+M2	INTEGER	"I love to think up new ways of doing things" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+M3	INTEGER	"I enjoy hearing new ideas" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+M4	INTEGER	"I carry the conversation to a higher level" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+M5	INTEGER	"I prefer variety to routine" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+M6	INTEGER	"I avoid philosophical discussions" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+M7	INTEGER	"I rarely look for a deeper meaning in things" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+M8	INTEGER	"I am not interested in theoretical discussions" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+M9	INTEGER	"I am not interested in abstract ideas" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+M10	INTEGER	"I try to avoid complex people" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+N1	INTEGER	"I want to be left alone" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+N2	INTEGER	"I prefer to do things by myself" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+N3	INTEGER	"I enjoy spending time by myself" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+N4	INTEGER	"I seek quiet" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+N5	INTEGER	"I don't mind eating alone" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+N6	INTEGER	"I enjoy silence" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+N7	INTEGER	"I enjoy my privacy" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+N8	INTEGER	"I enjoy being part of a group" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+N9	INTEGER	"I enjoy teamwork" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+N10	INTEGER	"I can't do without the company of others" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+O1	INTEGER	"I want everything to be 'just right'" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+O2	INTEGER	"I get chores done right away" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+O3	INTEGER	"I like order" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+O4	INTEGER	"I continue until everything is perfect" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+O5	INTEGER	"I am exacting in my work" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+O6	INTEGER	"I am not bothered by messy people" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+O7	INTEGER	"I am not bothered by disorder" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+O8	INTEGER	"I leave a mess in my room" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+O9	INTEGER	"I leave my belongings around" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+O10	INTEGER	"I put off unpleasant tasks" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+P1	INTEGER	"I get irritated easily" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+P2	INTEGER	"I get angry easily" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+P3	INTEGER	"I am quick to judge others" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+P4	INTEGER	"I am annoyed by others' mistakes" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+P5	INTEGER	"I am easily put out" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+P6	INTEGER	"I can't stand being contradicted" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+P7	INTEGER	"I judge people by their appearance" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+P8	INTEGER	"I am not easily annoyed" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+P9	INTEGER	"I try to forgive and forget" rated on a five point scale (1-5;0 if missed). 1 was labeled as "strongly disagree", 2 was labeled as "disagree", 3 was labeled as "neither agree not disagree", 4 was labeled as "agree" and 5 was labeled as "strongly agree".
+country	STRING	The country the user connected from (based on IP address) in the form of ISO 3166 country codes, with some augmentations. The full key is below:
+
+A1,"Anonymous Proxy"
+A2,"Satellite Provider"
+O1,"Other Country"
+AD,"Andorra"
+AE,"United Arab Emirates"
+AF,"Afghanistan"
+AG,"Antigua and Barbuda"
+AI,"Anguilla"
+AL,"Albania"
+AM,"Armenia"
+AO,"Angola"
+AP,"Asia/Pacific Region"
+AQ,"Antarctica"
+AR,"Argentina"
+AS,"American Samoa"
+AT,"Austria"
+AU,"Australia"
+AW,"Aruba"
+AX,"Aland Islands"
+AZ,"Azerbaijan"
+BA,"Bosnia and Herzegovina"
+BB,"Barbados"
+BD,"Bangladesh"
+BE,"Belgium"
+BF,"Burkina Faso"
+BG,"Bulgaria"
+BH,"Bahrain"
+BI,"Burundi"
+BJ,"Benin"
+BL,"Saint Bartelemey"
+BM,"Bermuda"
+BN,"Brunei Darussalam"
+BO,"Bolivia"
+BQ,"Bonaire, Saint Eustatius and Saba"
+BR,"Brazil"
+BS,"Bahamas"
+BT,"Bhutan"
+BV,"Bouvet Island"
+BW,"Botswana"
+BY,"Belarus"
+BZ,"Belize"
+CA,"Canada"
+CC,"Cocos (Keeling) Islands"
+CD,"Congo, The Democratic Republic of the"
+CF,"Central African Republic"
+CG,"Congo"
+CH,"Switzerland"
+CI,"Cote d'Ivoire"
+CK,"Cook Islands"
+CL,"Chile"
+CM,"Cameroon"
+CN,"China"
+CO,"Colombia"
+CR,"Costa Rica"
+CU,"Cuba"
+CV,"Cape Verde"
+CW,"Curacao"
+CX,"Christmas Island"
+CY,"Cyprus"
+CZ,"Czech Republic"
+DE,"Germany"
+DJ,"Djibouti"
+DK,"Denmark"
+DM,"Dominica"
+DO,"Dominican Republic"
+DZ,"Algeria"
+EC,"Ecuador"
+EE,"Estonia"
+EG,"Egypt"
+EH,"Western Sahara"
+ER,"Eritrea"
+ES,"Spain"
+ET,"Ethiopia"
+EU,"Europe"
+FI,"Finland"
+FJ,"Fiji"
+FK,"Falkland Islands (Malvinas)"
+FM,"Micronesia, Federated States of"
+FO,"Faroe Islands"
+FR,"France"
+GA,"Gabon"
+GB,"United Kingdom"
+GD,"Grenada"
+GE,"Georgia"
+GF,"French Guiana"
+GG,"Guernsey"
+GH,"Ghana"
+GI,"Gibraltar"
+GL,"Greenland"
+GM,"Gambia"
+GN,"Guinea"
+GP,"Guadeloupe"
+GQ,"Equatorial Guinea"
+GR,"Greece"
+GS,"South Georgia and the South Sandwich Islands"
+GT,"Guatemala"
+GU,"Guam"
+GW,"Guinea-Bissau"
+GY,"Guyana"
+HK,"Hong Kong"
+HM,"Heard Island and McDonald Islands"
+HN,"Honduras"
+HR,"Croatia"
+HT,"Haiti"
+HU,"Hungary"
+ID,"Indonesia"
+IE,"Ireland"
+IL,"Israel"
+IM,"Isle of Man"
+IN,"India"
+IO,"British Indian Ocean Territory"
+IQ,"Iraq"
+IR,"Iran, Islamic Republic of"
+IS,"Iceland"
+IT,"Italy"
+JE,"Jersey"
+JM,"Jamaica"
+JO,"Jordan"
+JP,"Japan"
+KE,"Kenya"
+KG,"Kyrgyzstan"
+KH,"Cambodia"
+KI,"Kiribati"
+KM,"Comoros"
+KN,"Saint Kitts and Nevis"
+KP,"Korea, Democratic People's Republic of"
+KR,"Korea, Republic of"
+KW,"Kuwait"
+KY,"Cayman Islands"
+KZ,"Kazakhstan"
+LA,"Lao People's Democratic Republic"
+LB,"Lebanon"
+LC,"Saint Lucia"
+LI,"Liechtenstein"
+LK,"Sri Lanka"
+LR,"Liberia"
+LS,"Lesotho"
+LT,"Lithuania"
+LU,"Luxembourg"
+LV,"Latvia"
+LY,"Libyan Arab Jamahiriya"
+MA,"Morocco"
+MC,"Monaco"
+MD,"Moldova, Republic of"
+ME,"Montenegro"
+MF,"Saint Martin"
+MG,"Madagascar"
+MH,"Marshall Islands"
+MK,"Macedonia"
+ML,"Mali"
+MM,"Myanmar"
+MN,"Mongolia"
+MO,"Macao"
+MP,"Northern Mariana Islands"
+MQ,"Martinique"
+MR,"Mauritania"
+MS,"Montserrat"
+MT,"Malta"
+MU,"Mauritius"
+MV,"Maldives"
+MW,"Malawi"
+MX,"Mexico"
+MY,"Malaysia"
+MZ,"Mozambique"
+NA,"Namibia"
+NC,"New Caledonia"
+NE,"Niger"
+NF,"Norfolk Island"
+NG,"Nigeria"
+NI,"Nicaragua"
+NL,"Netherlands"
+NO,"Norway"
+NP,"Nepal"
+NR,"Nauru"
+NU,"Niue"
+NZ,"New Zealand"
+OM,"Oman"
+PA,"Panama"
+PE,"Peru"
+PF,"French Polynesia"
+PG,"Papua New Guinea"
+PH,"Philippines"
+PK,"Pakistan"
+PL,"Poland"
+PM,"Saint Pierre and Miquelon"
+PN,"Pitcairn"
+PR,"Puerto Rico"
+PS,"Palestinian Territory"
+PT,"Portugal"
+PW,"Palau"
+PY,"Paraguay"
+QA,"Qatar"
+RE,"Reunion"
+RO,"Romania"
+RS,"Serbia"
+RU,"Russian Federation"
+RW,"Rwanda"
+SA,"Saudi Arabia"
+SB,"Solomon Islands"
+SC,"Seychelles"
+SD,"Sudan"
+SE,"Sweden"
+SG,"Singapore"
+SH,"Saint Helena"
+SI,"Slovenia"
+SJ,"Svalbard and Jan Mayen"
+SK,"Slovakia"
+SL,"Sierra Leone"
+SM,"San Marino"
+SN,"Senegal"
+SO,"Somalia"
+SR,"Suriname"
+SS,"South Sudan"
+ST,"Sao Tome and Principe"
+SV,"El Salvador"
+SX,"Sint Maarten"
+SY,"Syrian Arab Republic"
+SZ,"Swaziland"
+TC,"Turks and Caicos Islands"
+TD,"Chad"
+TF,"French Southern Territories"
+TG,"Togo"
+TH,"Thailand"
+TJ,"Tajikistan"
+TK,"Tokelau"
+TL,"Timor-Leste"
+TM,"Turkmenistan"
+TN,"Tunisia"
+TO,"Tonga"
+TR,"Turkey"
+TT,"Trinidad and Tobago"
+TV,"Tuvalu"
+TW,"Taiwan"
+TZ,"Tanzania, United Republic of"
+UA,"Ukraine"
+UG,"Uganda"
+UM,"United States Minor Outlying Islands"
+US,"United States"
+UY,"Uruguay"
+UZ,"Uzbekistan"
+VA,"Holy See (Vatican City State)"
+VC,"Saint Vincent and the Grenadines"
+VE,"Venezuela"
+VG,"Virgin Islands, British"
+VI,"Virgin Islands, U.S."
+VN,"Vietnam"
+VU,"Vanuatu"
+WF,"Wallis and Futuna"
+WS,"Samoa"
+YE,"Yemen"
+YT,"Mayotte"
+ZA,"South Africa"
+ZM,"Zambia"
+ZW,"Zimbabwe"
+source	INTEGER	How the participant came to the test based on HTTP referrer (the url the link the user clicked was on). 1=from front page of website that hosted the survey, 2=from google, 3=facebook, 4=any url containing ".edu" (so "xxx.edu" or "xxx.edu.au" etc., typically it appears these are students in a course where the professor linked the test in their course management software (e.g. moodle)), 5=wikipedia, 6=other source or empty source (empty source=not provided or direct traffic).
+accuracy	INTEGER	After submission, subjects were instructed to indicate on a scale from 0000 the overall accuracy of their answers. Subjects were instructed to enter 0 if they did not want their data used. Only submissions with accuracy > 0 have been retained.
+elapse	INTEGER	Number of seconds between when the user started the test and when they submitted it .
+age	INTEGER	Age in years, only ages >= 13 retained.
+gender	INTEGER	1 if "Male", 2 if "Female, 3 if "Other" (0 if missed).
