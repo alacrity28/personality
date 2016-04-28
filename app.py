@@ -59,4 +59,4 @@ def contact():
 if __name__ == '__main__':
     main_ = model()
     data, questions, country_dict, questions_dict, answers_clean = main_.load_data()
-    app.run(host='0.0.0.0',port=8080, debug=True)
+    app.run(host='0.0.0.0',port=8000, debug=True)

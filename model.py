@@ -2,18 +2,15 @@ import numpy as np
 import pandas as pd
 from collections import defaultdict
 import matplotlib.pyplot as plt
-from sklearn.decomposition import NMF
-from sklearn.decomposition import ProjectedGradientNMF
+from sklearn.decomposition import NMF, FactorAnalysis, PCA, ProjectedGradientNMF, TruncatedSVD, FastICA
 from numpy import array, matrix, linalg
 from sklearn.metrics import mean_squared_error
-from sklearn.decomposition import TruncatedSVD
 from scipy.linalg import svd
 from sklearn.cluster import KMeans
 from scipy.cluster.hierarchy import linkage, dendrogram
 from scipy.spatial.distance import pdist, squareform
 from scipy.stats import ttest_ind
 import json
-from sklearn.decomposition import FactorAnalysis
 from scipy.linalg import svd
 import cPickle
 
@@ -61,28 +58,23 @@ class model(object):
 
     answers.groupby(group_letter, axis = 1).mean()
     '''
+    def reconst_mse(self, target, left, right):
+        return (array(target - left.dot(right))**2).mean()
 
-
-    def nmf(self, factors = 5, top_questions = 10):
-        nmf = NMF(n_components = factors)
-        W_nmf = nmf.fit_transform(self.answers_clean)
-        H_nmf = nmf.components_
-        self.describe_nmf_results(W_nmf, H_nmf, top_questions)
-        #return self.reconst_mse(self.answers_clean, W_nmf, H_nmf)
-        return W_nmf, H_nmf, nmf
-
-
-    def describe_nmf_results(self, W, H, top_questions = 10):
+    def describe_results(self, W, H, top_questions = 10):
         print("Reconstruction error: %f") %(self.reconst_mse(self.answers_clean, W, H))
         for topic_num, topic in enumerate(H):
             print("Topic %d:" % topic_num)
             print [self.questions.loc[i]['Description'] for i in topic.argsort()[:-top_questions - 1:-1]]
             print [self.questions.loc[i]['Field'] for i in topic.argsort()[:-top_questions - 1:-1]]
 
-
-    def reconst_mse(self, target, left, right):
-        return (array(target - left.dot(right))**2).mean()
-
+    def nmf(self, factors = 5, top_questions = 10):
+        nmf = NMF(n_components = factors)
+        W_nmf = nmf.fit_transform(self.answers_clean)
+        H_nmf = nmf.components_
+        self.describe_results(W_nmf, H_nmf, top_questions)
+        #return self.reconst_mse(self.answers_clean, W_nmf, H_nmf)
+        return W_nmf, H_nmf #, nmf
 
     def svd(self, factors = 5, top_questions = 10):
         svd = TruncatedSVD(n_components = factors)
@@ -90,15 +82,32 @@ class model(object):
         H = svd.components_
         var_ratio = svd.explained_variance_ratio_
         var = svd.explained_variance_
-        self.describe_svd_results(W, H, top_questions)
+        self.describe_results(W, H, top_questions)
+        #reconstructed = self.reconst_mse(self.answers_clean, W, H)
+        #return reconstructed
         return W, H, var_ratio, var
 
-    def describe_svd_results(self, W, H, top_questions = 10):
-        print("Reconstruction error: %f") %(self.reconst_mse(self.answers_clean, W, H))
-        for topic_num, topic in enumerate(H):
-            print("Topic %d:" % topic_num)
-            print [self.questions.loc[i]['Description'] for i in topic.argsort()[:-top_questions - 1:-1]]
-            print [self.questions.loc[i]['Field'] for i in topic.argsort()[:-top_questions - 1:-1]]
+    def pca(self, factors = 5, top_questions = 10):
+        pca = PCA(n_components = factors)
+        W = pca.fit_transform(self.answers_clean)
+        H = pca.components_
+        var_ratio = pca.explained_variance_ratio_
+        covariance_ = pca.get_covariance()
+        self.describe_results(W, H, top_questions)
+        #reconstructed = self.reconst_mse(self.answers_clean, W, H)
+        #return reconstructed
+        return W, H, var_ratio, covariance_
+
+    def ica(self, factors = 5, top_questions = 10):
+        ica = FastICA(n_components = factors)
+        W = ica.fit_transform(self.answers_clean)
+        H = ica.components_
+        mixing_ = ica.mixing_
+        n_iter_ = ica.n_iter_
+        #self.describe_results(W, H, top_questions)
+        reconstructed = self.reconst_mse(self.answers_clean, W, H)
+        return reconstructed
+        #return W, H, mixing_, n_iter_
 
     #kmeans
     def kmeans(self, clusters = 5):
@@ -114,6 +123,7 @@ class model(object):
             print [self.questions.loc[i]['Description'] for i in centroid]
             print [self.questions.loc[i]['Field'] for i in centroid]
             print "................................................................"
+
 
     def pickle(self):
 
