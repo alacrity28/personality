@@ -40,7 +40,7 @@ def import_and_clean():
     data = create_age_bucket(data)
 
     #create just the answers dataframe
-    clean_answers, clean_data = create_answers(data, questions)
+    clean_answers, clean_data, messy_answers = create_answers(data, questions)
 
     #answers_correct_axis = clean_answers.apply(lambda x: adjust_scale(x, questions))
 
@@ -54,6 +54,7 @@ def import_and_clean():
     clean_data.to_csv('data/clean_data/data.csv')
     questions.to_csv('data/clean_data/questions.csv')
     clean_answers.to_csv('data/clean_data/answers_clean.csv')
+    messy_answers.to_csv('data/clean_data/messy_answers.csv')
 
     #return answers_correct_axis, answers_correct_axis.shape
 
@@ -125,15 +126,15 @@ def create_answers(data, questions):
     clean_data = data[(data[just_answers] == 0).sum(axis=1) < 2]
 
     #this gets just the answers that have 1 or no missing values
-    clean_answers_pre = clean_data[just_answers]
+    messy_answers = clean_data[just_answers]
 
     #column means of the cleaned data
-    column_means = clean_answers_pre.mean(axis=0)
+    column_means = messy_answers.mean(axis=0)
 
-    zero_to_nan = clean_answers_pre.replace(0, np.nan)
+    zero_to_nan = messy_answers.replace(0, np.nan)
     clean_answers = zero_to_nan.fillna(column_means)
 
-    return clean_answers, clean_data
+    return clean_answers, clean_data, messy_answers
 
 
 def adjust_scale(row, questions):

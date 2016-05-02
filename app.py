@@ -58,5 +58,5 @@ def contact():
 
 if __name__ == '__main__':
     main_ = model()
-    data, questions, country_dict, questions_dict, answers_clean = main_.load_data()
+    data, questions, country_dict, questions_dict, answers_clean, answers_messy = main_.load_data()
     app.run(host='0.0.0.0',port=8000, debug=True)

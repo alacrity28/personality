@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Personality ~ Erin Wolpert</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="static/css/1-col-portfolio.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Personality</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/portfolio">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="/about">About</a>
+                    </li>
+                    <li>
+                        <a href="/contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Big Five Trait Theory:
+                    <small></small>
+                </h1>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Project One -->
+        <div>
+            <div class="md-5">
+                <h3>A Brief History of Big Five</h3>
+                <h4></h4>
+                <p>Trait theory is the idea that human personality can be described as set number of factors.  Big Five trait theory is one of the
+                    most scientifically respected trait theories because it has been replicated many times over different studies.  It proposes the following
+                    dissection of human behavior:</p>
+                <li> Openness to Experience </li>
+                <li> Conscientiousness </li>
+                <li> Extraversion </li>
+                <li> Agreeableness </li>
+                <li> Neuroticism </li>
+                <p> The 16pf, a 163 question personality questionnaire developed in the 1940's, is the first personality test where researchers used factor analysis create a resulting trait theory.
+                    Factoring the 16pf lead to the creation of the Big Five trait theory.
+                </p>
+                <p> <b> My project uses a data set of 50K respondents to the 16pf.  The data was collected on the internet from people all around the world from a wide range of demgraphics. In this project, I first
+                    aimed to see if I could replicate the Big Five in my analysis.  This required me to choose an appropriate factoring algorithm. </b> </p>
+            </div>
+
+        </div>
+
+
+        <div>
+            <div class="md-5">
+                <h3>An Introduction to Matrix Factorization</h3>
+                <h4></h4>
+                <p> Non-negative matrix factorization (NMF) is a method of dimensionality reduction which operates on exclusively positive data and decomposes the original data in to two smaller, positive matricies.
+                As an algorithm, it is especially well-suited for situations where one needs interpretable results because it outputs only positive values. One major draw back of the method is that it does not
+                produce a unique solution, instead it produces many approximate decompositions to the original matrix.
+                This means that everytime you run the algorithm, it produces a different, yet equally true solution (to all other solutions that it gives).
+                While the interpretability of NMF is especially useful for an application to personality, the lack of a unique solution is somewhat problematic because the results from the NMF can vary quite significantly.
+                </p>
+                <p>While NMF was the final algorithm choosen, I also tried other matrix factorizations including singular value decomposition, independent component anlysis and principal component analysis.
+                    These methods allow for negative values in the resulting matricies which changes the interpretation of the problem and raises questions like "What does it mean to have a negative value on a "likes to party" trait?".
+                    While the concept of being rated "zero" on "likes to party" makes contextual sense, negative values arguably make sense.  The benefit of other methods is that they produce unique solutions,
+                    but as I found in my analysis the personality categories from these analyses consistently made less sense than those that NMF produced.  SVD, ICA and PCA generally produced results that were less internally consistent (the test questions within a trait varied more widely)
+                    and were more likely to share concepts between factors, meaning that there were fewer clear distinctions between factors. As a result, I choose to use NMF.
+                </p>
+
+                <p>
+                    I attempted to find a method to get a unique solution from Non-Negative Matrix Factorization.  While some theoretical papers show that it is possible under some very specific conditions,
+                    they weren't relevant or practical to the scope of this project. Instead, I borrowed the concepts of aggregating and boosting from random forests to create a "boosted" NMF.
+                    I ran 1000 iterations of nmf, keeping only the top questions associated with each of the five factors in each iteration.
+                    A "master" factor dictionary stored the top questions for each factor and with each iteration, I matched each new factors's top
+                    questions with those in the master dictionary to find the closest fit, and then add the new questions to appropriate factor in the dictionary.
+                    The goal of this algorithm was to "clean" the factors by boosting them with information from the previous iterations.
+                </p>
+            </div>
+        </div>
+
+        <div>
+            <img class="img-responsive" src="static/images/bigfiveanalysis.png" alt="">
+        </div>
+
+
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>~Erin Wolpert 2016</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="static/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="static/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

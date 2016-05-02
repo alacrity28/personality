@@ -19,11 +19,11 @@ class model(object):
 
     def __init__(self):
 
-        data, questions, country_dict, questions_dict, answers_clean = self.load_data()
+        data, questions, country_dict, questions_dict, answers_clean, messy_answers = self.load_data()
 
         self.data = data
         self.questions = questions
-        #self.answers = answers
+        self.messy_answers = messy_answers
         self.country_dict = country_dict
         self.questions_dict = questions_dict
         self.answers_clean = answers_clean
@@ -39,8 +39,9 @@ class model(object):
         data = pd.read_csv("data/clean_data/data.csv").drop('Unnamed: 0', axis = 1)
         questions = pd.read_csv("data/clean_data/questions.csv").drop('Unnamed: 0', axis = 1)
         answers_clean = pd.read_csv("data/clean_data/answers_clean.csv").drop('Unnamed: 0', axis = 1)
+        messy_answers = pd.read_csv("data/clean_data/messy_answers.csv").drop('Unnamed: 0', axis = 1)
 
-        return data, questions, country_dict, questions_dict, answers_clean
+        return data, questions, country_dict, questions_dict, answers_clean, messy_answers
 
 
     #helper functions
@@ -50,7 +51,6 @@ class model(object):
         check_value = questions_dict[col_name.lower()] if len_ > 1 else col_name
         good_cols = [col for col in self.answers_clean.columns if col[0] == check_value]
         return self.answers_clean[good_cols]
-
 
     '''
     def group_letter(answers):
@@ -74,7 +74,7 @@ class model(object):
         H_nmf = nmf.components_
         self.describe_results(W_nmf, H_nmf, top_questions)
         #return self.reconst_mse(self.answers_clean, W_nmf, H_nmf)
-        return W_nmf, H_nmf #, nmf
+        return W_nmf, H_nmf, nmf
 
     def svd(self, factors = 5, top_questions = 10):
         svd = TruncatedSVD(n_components = factors)
@@ -127,9 +127,9 @@ class model(object):
 
     def pickle(self):
 
-        W_5, H_5, nmf_5 = self.nmf(factors = 5, top_questions = 8)
-        W_8, H_8, nmf_8 = self.nmf(factors = 8, top_questions = 8)
-        W_16, H_16, nmf_16 = self.nmf(factors = 16, top_questions = 8)
+        W_5, H_5, nmf_5 = self.nmf(factors = 5, top_questions = 10)
+        W_8, H_8, nmf_8 = self.nmf(factors = 8, top_questions = 10)
+        W_16, H_16, nmf_16 = self.nmf(factors = 16, top_questions = 10)
 
         cPickle.dump( W_5, open( "data/clean_data/W_5.p", "wb" ) )
         cPickle.dump( H_5, open( "data/clean_data/H_5.p", "wb" ) )
@@ -145,6 +145,21 @@ class model(object):
 
         print "The pickling is complete! Yummy!"
 
+    '''
+    /code to load from pickle
+
+    W_5 = cPickle.load( open( "data/clean_data/W_5.p", "rb" ) )
+    H_5 = cPickle.load( open( "data/clean_data/H_5.p", "rb" ) )
+    nmf_5 = cPickle.load( open( "data/clean_data/nmf_5.p", "rb" ) )
+
+    W_8 = cPickle.load( open( "data/clean_data/W_8.p", "rb" ) )
+    H_8 = cPickle.load( open( "data/clean_data/H_8.p", "rb" ) )
+    nmf_8 = cPickle.load( open( "data/clean_data/nmf_8.p", "rb" ) )
+
+    W_16 = cPickle.load( open( "data/clean_data/W_16.p", "rb" ) )
+    H_16 = cPickle.load( open( "data/clean_data/H_16.p", "rb" ) )
+    nmf_16 = cPickle.load( open( "data/clean_data/nmf_16.p", "rb" ) )
+    '''
 
 '''
 def factor_analysis(self, n_components = 16, svd_method = 'lapack'):
