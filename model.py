@@ -18,6 +18,12 @@ import cPickle
 class model(object):
 
     def __init__(self):
+        '''
+        Input: instance variables
+        Output: Nothing
+
+        This function initializes cleaned data (from the load_data function) that was read in, cleaned and saved ouy by cleaning.py.
+        '''
 
         data, questions, country_dict, questions_dict, answers_clean, messy_answers = self.load_data()
 
@@ -29,6 +35,12 @@ class model(object):
         self.answers_clean = answers_clean
 
     def load_data(self):
+        '''
+        Input: instance variable
+        Output: dataframe, dataframe, dictionary, dictionary, dataframe, dataframe
+
+        This function loads in the data that was cleaned in cleaning.py.
+        '''
 
         with open('data/clean_data/questions_dict') as json_file:
             questions_dict = json.load(json_file)
@@ -43,79 +55,140 @@ class model(object):
 
         return data, questions, country_dict, questions_dict, answers_clean, messy_answers
 
-
-    #helper functions
     def pull_factors(self, col_name):
+        '''
+        Input: Instance Variable, string
+        Output: dataframe
+
+        This function was used to easily pull out the groupings of questions that the survey questions are formatted in. This
+        is a helper function used for easy EDA analysis.
+        '''
 
         len_ = len(col_name)
         check_value = questions_dict[col_name.lower()] if len_ > 1 else col_name
         good_cols = [col for col in self.answers_clean.columns if col[0] == check_value]
         return self.answers_clean[good_cols]
 
-    '''
-    def group_letter(answers):
-    return answers[0]
-
-    answers.groupby(group_letter, axis = 1).mean()
-    '''
     def reconst_mse(self, target, left, right):
+        '''
+        Input: instance variable, dataframe, dataframe, dataframe
+        Output: float
+
+        This function calculates the Reconstruction mean squared error.
+        '''
         return (array(target - left.dot(right))**2).mean()
 
     def describe_results(self, W, H, top_questions = 10):
+        '''
+        Input: instance variable, dataframe, dataframe, integer
+        Output: nothing
+
+        This prints out the top 10 questions related to the topics found in the model.
+        It is used to interpret the model results.
+        '''
         print("Reconstruction error: %f") %(self.reconst_mse(self.answers_clean, W, H))
         for topic_num, topic in enumerate(H):
             print("Topic %d:" % topic_num)
             print [self.questions.loc[i]['Description'] for i in topic.argsort()[:-top_questions - 1:-1]]
             print [self.questions.loc[i]['Field'] for i in topic.argsort()[:-top_questions - 1:-1]]
 
+
     def nmf(self, factors = 5, top_questions = 10):
+        '''
+        Input: instance variable, integer, integer
+        Output: dataframe, dataframe, object
+
+        This function performs NMF, calls the describe function which returns the results and returns the W and H matrix.
+        It also returns the nmf model itself so that other functions can be called on it during EDA.
+        '''
         nmf = NMF(n_components = factors)
         W_nmf = nmf.fit_transform(self.answers_clean)
         H_nmf = nmf.components_
         self.describe_results(W_nmf, H_nmf, top_questions)
-        #return self.reconst_mse(self.answers_clean, W_nmf, H_nmf)
         return W_nmf, H_nmf, nmf
 
-    def svd(self, factors = 5, top_questions = 10):
-        svd = TruncatedSVD(n_components = factors)
-        W = svd.fit_transform(self.answers_clean)
-        H = svd.components_
-        var_ratio = svd.explained_variance_ratio_
-        var = svd.explained_variance_
-        self.describe_results(W, H, top_questions)
-        #reconstructed = self.reconst_mse(self.answers_clean, W, H)
-        #return reconstructed
-        return W, H, var_ratio, var
-
     def pca(self, factors = 5, top_questions = 10):
+        '''
+        Input: instance variable, integer, integer
+        Output: dataframe, dataframe, list, integer
+
+        This function performs PCA, calls the describe function which returns the results and returns the decomposed matricies along with
+        other m
+        '''
         pca = PCA(n_components = factors)
         W = pca.fit_transform(self.answers_clean)
         H = pca.components_
         var_ratio = pca.explained_variance_ratio_
         covariance_ = pca.get_covariance()
         self.describe_results(W, H, top_questions)
-        #reconstructed = self.reconst_mse(self.answers_clean, W, H)
-        #return reconstructed
         return W, H, var_ratio, covariance_
 
     def ica(self, factors = 5, top_questions = 10):
+        '''
+        Input: instance variable, integer, integer
+        Output: dataframe, dataframe, list, integer
+
+        This function performs ICA, calls the describe function which returns the results and returns the decomposed matricies.
+        '''
+
         ica = FastICA(n_components = factors)
         W = ica.fit_transform(self.answers_clean)
         H = ica.components_
         mixing_ = ica.mixing_
         n_iter_ = ica.n_iter_
-        #self.describe_results(W, H, top_questions)
-        reconstructed = self.reconst_mse(self.answers_clean, W, H)
-        return reconstructed
-        #return W, H, mixing_, n_iter_
+        self.describe_results(W, H, top_questions)
+        return W, H, mixing_, n_iter_
 
-    #kmeans
+
+    def svd(self, factors = 5, top_questions = 10):
+        '''
+        Input: instance variable, integer, integer
+        Output: dataframe, dataframe, list, integer
+
+        This function performs SVD, calls the describe function which returns the results and returns the decomposed matricies.
+        It also returns the svd model itself so that other functions can be called on it during EDA.
+        '''
+
+        svd = TruncatedSVD(n_components = factors)
+        W = svd.fit_transform(self.answers_clean)
+        H = svd.components_
+        var_ratio = svd.explained_variance_ratio_
+        var = svd.explained_variance_
+        self.describe_svd_results(W, H, top_questions)
+        return W, H, var_ratio, var
+
+    def describe_svd_results(self, W, H, top_questions = 10):
+        '''
+        Input: instance variable, dataframe, dataframe, integer
+        Output: nothing
+
+        This prints out the top 10 questions related to the topics found in the svd model.
+        It is used to interpret the model results.
+        '''
+        for topic_num, topic in enumerate(H):
+            print("Topic %d:" % topic_num)
+            print [self.questions.loc[i]['Description'] for i in topic.argsort()[:-top_questions - 1:-1]]
+            print [self.questions.loc[i]['Field'] for i in topic.argsort()[:-top_questions - 1:-1]]
+
     def kmeans(self, clusters = 5):
+        '''
+        Input: instance variable, integer
+        Output: nothing
+
+        Fits a kmeans model and calls the describe function.
+        '''
         kmeans = KMeans(n_clusters = clusters)
         kmeans.fit(self.answers_clean)
         self.describe_kmeans_results(kmeans)
 
     def describe_kmeans_results(self, kmeans):
+        '''
+        Input: instance variable, integer
+        Output: nothing
+
+        Prints the top 10 question closest to the center of a cluster.
+        '''
+
         top_centroids = kmeans.cluster_centers_.argsort()[:,-1:-11:-1]
         print "top features for each cluster:"
         for num, centroid in enumerate(top_centroids):
@@ -126,6 +199,14 @@ class model(object):
 
 
     def pickle(self):
+        '''
+        Input: instance variable
+        Output: nothing
+
+        Performs 3 nmf models with 3 different component levels. Then it pickles the data and model.
+        Because NMF produces non-unique results, this function runs an nmf and freezes the results so that I
+        can reference the same solution to the nmf at different occasions.
+        '''
 
         W_5, H_5, nmf_5 = self.nmf(factors = 5, top_questions = 10)
         W_8, H_8, nmf_8 = self.nmf(factors = 8, top_questions = 10)
@@ -145,83 +226,6 @@ class model(object):
 
         print "The pickling is complete! Yummy!"
 
-    '''
-    /code to load from pickle
-
-    W_5 = cPickle.load( open( "data/clean_data/W_5.p", "rb" ) )
-    H_5 = cPickle.load( open( "data/clean_data/H_5.p", "rb" ) )
-    nmf_5 = cPickle.load( open( "data/clean_data/nmf_5.p", "rb" ) )
-
-    W_8 = cPickle.load( open( "data/clean_data/W_8.p", "rb" ) )
-    H_8 = cPickle.load( open( "data/clean_data/H_8.p", "rb" ) )
-    nmf_8 = cPickle.load( open( "data/clean_data/nmf_8.p", "rb" ) )
-
-    W_16 = cPickle.load( open( "data/clean_data/W_16.p", "rb" ) )
-    H_16 = cPickle.load( open( "data/clean_data/H_16.p", "rb" ) )
-    nmf_16 = cPickle.load( open( "data/clean_data/nmf_16.p", "rb" ) )
-    '''
-
-'''
-def factor_analysis(self, n_components = 16, svd_method = 'lapack'):
-    #lapack is the extact same as SVD from scipy.linalg
-    fa = FactorAnalysis(n_components = n_components, svd_method = svd_method)
-    fa = fit_transform(self.data)
-    describe_factor_analysis(fa)
-
-def describe_factor_analysis(self, fa):
-    pass
-'''
-
-'''
-    fit(X[, y])	Fit the FactorAnalysis model to X using EM
-fit_transform(X[, y])	Fit to data, then transform it.
-get_covariance()	Compute data covariance with the FactorAnalysis model.
-get_params([deep])	Get parameters for this estimator.
-get_precision()	Compute data precision matrix with the FactorAnalysis model.
-score(X[, y])	Compute the average log-likelihood of the samples
-score_samples(X)	Compute the log-likelihood of each sample
-set_params(**params)	Set the parameters of this estimator.
-transform(X)	Apply dimensionality reduction to X using the model.
-'''
-
-###other models
-#scipy.stats.ttest_ind
-'''
-#gets the mean gender
-mean_gender = data.groupby('gender').mean()[answers.columns]
-
-#takes a column name and returns the letter related to it
-def group_letter(answers):
-    return answers[0]
-
-mean_gender.groupby(group_letter, axis = 1).mean()
-
-men = data[data['gender'] == 1][answers.columns]
-women = data[data['gender'] == 2][answers.columns]
-
-men_factors = men.groupby(group_letter, axis = 1).mean()
-women_factors = women.groupby(group_letter, axis = 1).mean()
-
-for i in questions_dict.keys():
-    print "{0}: {1}".format(str(i.upper()), ttest_ind(men_factors[str(i.upper())], women_factors[str(i.upper())])[1])
-
-
-for i in questions.iterrows():
-    print "{0}: {1} - {2}".format(str(i[1][0].upper()), i[1][1], ttest_ind(men[men[str(i[1][0].upper())] != 0][str(i[1][0].upper())], women[women[str(i[1][0].upper())] != 0][str(i[1][0].upper())])[1] < .01)
-    print ""
-
-plt.bar(range(len(gender_means[1:2].columns.values)), gender_means[1:2].values.T, tick_label=gender_means[1:2].columns, align = 'center', color = '#')
-plt.bar(range(len(gender_means[2:3].columns.values)), gender_means[2:3].values.T, tick_label=gender_means[2:3].columns, align = 'center', color = '#')
-
-
-elbow/plot:
-errors = []
-for i in xrange(1,21):
-    error = main_.nmf(factors = i, top_questions = 8)
-    errors.append(error)
-plt.plot(errors)
-
-'''
 
 if __name__ == '__main__':
     data, questions, answers, country_dict, questions_dict = load_data()

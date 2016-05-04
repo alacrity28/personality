@@ -17,6 +17,12 @@ import csv
 
 
 def import_and_clean():
+    '''
+    Input: Nothing
+    Output: statement confirming the process
+
+    This function imports the data, runs it through the cleaning functions and then saves it out as json dumps or to csv.
+    '''
 
     #import data
     data = pd.read_csv('data/data.csv', delimiter = "\t")
@@ -26,12 +32,11 @@ def import_and_clean():
     #clean_meta_data
     questions, questions_dict = extract_questions(meta_data, data)
 
-    #country and continent
     #make country dict
     country_dict = create_country_dict(country)
 
 
-    #add long country anme to data
+    #add long country name to data
     data['country_name'] = data['country'].apply(lambda x: country_dict[x])    #trait_pre1.applymap(lambda x: change_trait(x))
     data['Continent'] = data['country'].apply(lambda x: get_continent(x))
 
@@ -41,8 +46,6 @@ def import_and_clean():
 
     #create just the answers dataframe
     clean_answers, clean_data, messy_answers = create_answers(data, questions)
-
-    #answers_correct_axis = clean_answers.apply(lambda x: adjust_scale(x, questions))
 
 
     with open('data/clean_data/country_dict', 'w') as outfile:
@@ -62,14 +65,23 @@ def import_and_clean():
 
 
 def extract_questions(meta_data, data):
+    '''
+    Input: dataframe, dataframe
+    Output: dataframe, dictionary
 
-    #This code insert's the question that is missing from the codebook but is in the dataset: P10 - "I have a good word for everyone." This appropriate index is preserved (index = 162).
+    This function takes in the meta_data which is the data about the personality questions themselves as well as the actual data (responses to questions).
+    It cleans the question data so there is clean "codebook" dataframe of the questions themselves, as well as a dictionary format of the questions codebook.
+    '''
+
+
+    #This code inserts the question that is missing from the codebook but is in the dataset: P10 - "I have a good word for everyone." This appropriate index is preserved (index = 162).
     first = meta_data[0:162]
     last = meta_data[162:]
     new_row = pd.DataFrame([['P10','INTEGER', 'I have a good word for everyone.']], columns=['Field', 'Format', 'Description'])
     first = first.append(new_row, ignore_index=True)
     meta_data = first.append(last, ignore_index=True)
 
+    #This code makes a new data frame of just the questions so it can be used for later reference
     questions_raw = meta_data[0:163][['Field','Description']]
     questions_raw['Description'] = questions_raw['Description'].apply(lambda x: x.split(" rated")[0])
     questions_extracted = pd.DataFrame(questions_raw)
@@ -78,6 +90,7 @@ def extract_questions(meta_data, data):
     questions_extracted['Trait_Letter'] = [x[0] for x in data.columns[:163]]
     questions_extracted['Trait'] = questions_extracted['Trait_Letter'].apply(lambda x: change_trait(x))
 
+    #this information assigns whether or not the question should be reverse coded or not and adds that info to questions_extracted
     ct_a = [1,] * 7 + [0,] * 3
     ct_b = [1,] * 8 + [0,] * 5
     ct_c = [1,] * 5 + [0,] * 5
@@ -98,7 +111,7 @@ def extract_questions(meta_data, data):
     questions_extracted['Coding'] = questions_extracted.index.map(lambda x: final[x])
 
 
-    #making questions_dict
+    #making questions_dict allows for future easy access of the questions
     questions_dict = {}
     for i in questions_extracted.iterrows():
         questions_dict[i[1][2].lower()] = i[1][3]
@@ -107,6 +120,12 @@ def extract_questions(meta_data, data):
 
 
 def create_country_dict(country):
+    '''
+    Input: dataframe
+    Output: dictionary
+
+    Creates a dictionary of all of the countries with the country abreiviation as the key and the country full name as the value.
+    '''
     country_dict = {}
     for i in country.iterrows():
         country_dict[i[1][0]] = i[1][1]
@@ -115,13 +134,28 @@ def create_country_dict(country):
 
 
 def create_age_bucket(data, bins = [0, 20, 30, 40, 50, 60, 70, 100], group_names = ['0-19', '20-29', '30-39', '40-49', '50-59', '60-69', '70+']):
+    '''
+    Input: dataframe, list, list
+    Output: dataframe
+
+    Creates a new column in the "data" dataframe for the age bucket that a survey participant falls into.
+    '''
 
     data['age_bucket'] = pd.cut(data['age'], bins, labels=group_names)
     return data
 
 
 def create_answers(data, questions):
+    '''
+    Input: dataframe, dataframe
+    Output: dataframe, dataframe, dataframe
 
+    This function reduces the data down to just responses where there are no more than 1 missing answer per row. It also creates two sets of dataframes that
+    have just the answers to the personality questions (not the demographic data). These two sets are a raw set (no cleaning, called messy_answers) and a clean set
+    where I take the average over a column to replace empty answers.
+    '''
+
+    #reduces data down to
     just_answers = [i for i in questions['Field']]
     clean_data = data[(data[just_answers] == 0).sum(axis=1) < 2]
 
@@ -137,20 +171,14 @@ def create_answers(data, questions):
     return clean_answers, clean_data, messy_answers
 
 
-def adjust_scale(row, questions):
-
-    changed_list = []
-    for key, value in row.iteritems():
-        if all(questions[questions['Field'] == key]['Coding'] == 0):
-            changed_list.append(change_scale(value[0]))
-        else:
-            changed_list.append(value[0])
-    row = pd.Series(changed_list)
-    return row
-
 
 def remove_nan(answers):
+    '''
+    Input: dataframe
+    Output: dataframe
 
+    Only takes data where there are fewer than 2 missing values per row. Replaces missing values with nan and then fills with column mean
+    '''
     clean_answers = answers[(answers == 0).sum(axis=1) < 2]
     column_means = clean_answers.mean(axis=0)
     no_zeros = clean_answers.replace(0, np.nan)
@@ -158,27 +186,12 @@ def remove_nan(answers):
 
     return no_zeros
 
-def change_scale(value):
-    new = 100
-
-    if value == 5:
-        new = 1
-    elif value == 4:
-        new = 2
-    elif value == 2:
-        new = 4
-    elif value == 1:
-        new = 5
-    elif value == 3:
-        new = 3
-    elif value == 0:
-        new = 0
-    else:
-        new = 100
-    return new
-
 
 def change_trait(x):
+    '''
+    Input:
+    Output:
+    '''
     if x == 'A':
         return "Warmth"
     if x == 'B':
@@ -213,45 +226,14 @@ def change_trait(x):
         return "Tension"
 
 
-def total_questions_in_category(x):
-
-    if x == 'A':
-        return 10
-    if x == 'B':
-        return 13
-    if x == 'C':
-        return 10
-    if x == 'D':
-        return 10
-    if x == 'E':
-        return 10
-    if x == 'F':
-        return 10
-    if x == 'G':
-        return 10
-    if x == 'H':
-        return 10
-    if x == 'I':
-        return 10
-    if x == 'J':
-        return 10
-    if x == 'K':
-        return 10
-    if x == 'L':
-        return 10
-    if x == 'M':
-        return 10
-    if x == 'N':
-        return 10
-    if x == 'O':
-        return 10
-    if x == 'P':
-        return 9
-
-
 def get_continent(country_short):
+    '''
+    Input: string
+    Output: string
 
-    #country abreiviation
+    Using the transformations package this function uses a country abreiviation to find the full country name.
+    '''
+
     try:
         continent = transformations.cca_to_ctn(country_short)
     except:
