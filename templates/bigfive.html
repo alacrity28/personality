@@ -85,14 +85,14 @@
                 <li> Extraversion </li>
                 <li> Agreeableness </li>
                 <li> Neuroticism </li>
-                <p> The 16pf, a 163 question personality questionnaire developed in the 1940's, is the first personality test where researchers used factor analysis create a resulting trait theory.
+                <p> The 16pf, a 163 question personality questionnaire developed in the 1940's, is the first personality test where researchers used factor analysis to create a trait theory.
                     Factoring the 16pf lead to the creation of the Big Five trait theory.
                 </p>
 
                 <br>
 
 
-                <p> <b> My project uses a data set of 50K respondents to the 16pf.  The data was collected on the internet from people all around the world from a wide range of demographics. In this project, I first
+                <p> <b> My project uses a data set of 50,000 respondents to the 16pf test.  The data was collected on the internet from people all around the world from a wide range of demographics. In this project, I first
                     aimed to see if I could replicate the Big Five in my analysis.  This required me to choose an appropriate factoring algorithm. </b> </p>
             </div>
 
@@ -106,7 +106,7 @@
 
                 <br>
 
-                <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Non-negative matrix factorization (NMF) is a method of dimensionality reduction which operates on exclusively positive data and decomposes the original data in to two smaller, positive matricies.
+                <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Non-negative matrix factorization (NMF) is a method of dimension reduction which operates on exclusively positive data and decomposes the original data in to two smaller, positive matricies.
                 As an algorithm, it is especially well-suited for situations where one needs interpretable results because it outputs only positive values. One major draw back of the method is that it does not
                 produce a unique solution, instead it produces many approximate decompositions to the original matrix.
                 This means that everytime you run the algorithm, it produces a different, yet equally true solution (to all other solutions that it gives).
@@ -126,10 +126,10 @@
 
                 <p>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I attempted to find a method to get a unique solution from Non-Negative Matrix Factorization.  While some theoretical papers show that it is possible under some very specific conditions,
-                    they weren't relevant or practical to the scope of this project. Instead, I borrowed the concepts of aggregating and boosting from random forests to create a "boosted" NMF.
+                    they weren't relevant or practical for the scope of this project. Instead, I borrowed the concepts of aggregating and boosting from random forests to create an ensemble NMF.
                     I ran 1000 iterations of nmf, keeping only the top questions associated with each of the five factors in each iteration.
                     A "master" factor dictionary stored the top questions for each factor and with each iteration, I matched each new factors's top
-                    questions with those in the master dictionary to find the closest fit, and then add the new questions to appropriate factor in the dictionary.
+                    questions with those in the master dictionary to find the closest fit, and then added the new questions to appropriate factor in the dictionary.
                     The goal of this algorithm was to "clean" the factors by boosting them with information from the previous iterations.
                 </p>
             </div>
@@ -149,7 +149,7 @@
                 <br>
                 <br>
 
-                <p>The boosted NMF produced three factors that mapped decently well back to the Big Five Trait theory.
+                <p>The ensemble NMF produced three factors that mapped back to the Big Five Trait theory.
                     "Not open to new ideas" seems to be very close to "open to new experiences" except that it measures the trait in the opposite direction.
                     Interestingly, "alone" and "social / people-oriented" could be thought of as being on opposite scales of "extraversion" so
                     for both of them to show up in the factorization might imply that social level is a pretty signficant factor in categorizing human behavior.
