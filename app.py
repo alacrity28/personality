@@ -15,9 +15,9 @@ def welcome():
 def about():
     return render_template('about.html')
 
-# @app.route('/portfolio')
-# def portfolio():
-#     return render_template('portfolio.html')
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
 
 @app.route('/bigfive')
 def bigfive():
