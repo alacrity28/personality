@@ -45,10 +45,10 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="/">Portfolio</a>
+                        <a href="/github">GitHub</a>
                     </li>
                     <li>
-                        <a href="/about">About</a>
+                        <a href="/linkedin">LinkedIn</a>
                     </li>
                 </ul>
             </div>
@@ -70,183 +70,69 @@
         </div>
         <!-- /.row -->
 
-        <div class="row">
-            <div class="col-md-5">
-                <h3>8 Trait Breakdown:</h3>
-                <li>Trait 1: Social / Respects Rules </li>
-                <li>Trait 2: Worried / Reserved </li>
-                <li>Trait 3: Partier / Emotionally Volatile</li>
-                <li>Trait 4: Breaks Rules / Judgmental</li>
-                <li>Trait 5: Angry / Judgemental / Dislikes Complex Ideas and Art</li>
-                <li>Trait 6: Passive / Messy / Sees Oneself as Average</li>
-                <li>Trait 7: Emotionally Open / Intellectually Thoughtful </li>
-                <li>Trait 8: Reserved </li>
-            </div>
-        </div>
+        <div>
+            <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To derive the ideal personality trait theory for the given personality test dataset, I first explored different dimension reduction methods (SVD, PCA, ICA) but ultimately found that
+                <a href="https://en.wikipedia.org/wiki/Non-negative_matrix_factorization"> Non-Negative Matrix Factorization </a> gave the cleanest set of personality traits. Specfically, to get those personality traits from NMF, one looks at the H matrix from the NMF.  A non-negative matrix factorization
+                decomposes the original matrix in to two matricies, a W and an H matrix. W and H approximate V but don't create a full reconstruction when multiplied because NMF's non-negative aspect makes it generally impossible to create a fully positive exact solution.
+            </p>
 
-        <hr>
+            <br>
+            <center> <img src="static/images/NMF.png" alt="NMF"> </center>
+            <br>
 
-        <!-- /.row -->
+            <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; In this case, V, the original matrix or dataset, has 50K survey respondents (rows) answering 163 questions (columns) (V = 50,000 X 163).
+            By choosing different numbers of personality traits to pull from the data, we change the dimensions of the decomposed W and H matricies.
+            When pulling 8 personality traits from the data, we get a W matrix with 50K survey respondents (rows) and how high they rate on the 8 personality traits (columns) (W = 50,000 X 8).
+            The H matrix has how each of the 8 traits (rows) relates to the 163 questions (columns) (H = 8 X 163). Thus, to figure out what exact personality trait each abstract trait is actually describing, we look
+            at the H matrix to see which personality questions most heavily weighted to a specific trait.
 
-        <hr>
+            </p>
 
-        <!-- Project Two: Country -->
-        <div class="row">
-            <div class="col-md-5">
-                <h3>Personality Traits By Country</h3>
-            </div>
-        </div>
+            <br>
 
+            <h4>
+                Choosing 8 Traits:
+            </h4>
 
-        <div class="row">
             <div>
-    <a href="https://plot.ly/~alacrity28/38/" target="_blank" title="Factor 1: Social / Respects Rules" style="display: block; text-align: center;"><img src="https://plot.ly/~alacrity28/38.png" alt="Factor 1: Social / Respects Rules" style="max-width: 100%;width: 1176px;"  width="1176" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
-    <script data-plotly="alacrity28:38"  src="https://plot.ly/embed.js" async></script>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When choosing the number of personality traits to pull out of the matrix, I both tried to maintain internal (within the top ten questions of trait) and external (in topics between traits) category consistency. I also aimed to pull non-trivial traits
+                out of the dataset, meaning, I wanted the traits to capture more complex ideas around personality.  After qualitatively exploring NMF models with different numbers of traits, I choose 8 because it best fit my model goals.
+
             </div>
+
+            <br>
+            <br>
+
+            <h4>
+            Explore the personality traits by demographic:
+        </h4>
+
         </div>
+
 
         <div class="row">
-            <div>
-    <a href="https://plot.ly/~alacrity28/24/" target="_blank" title="Factor 2: Worried / Reserved" style="display: block; text-align: center;"><img src="https://plot.ly/~alacrity28/24.png" alt="Factor 2: Worried / Reserved" style="max-width: 100%;width: 1176px;"  width="1176" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
-    <script data-plotly="alacrity28:24"  src="https://plot.ly/embed.js" async></script>
-            </div>
+            <h3> <a href="/trait1"> Trait 1: Social / Respects Rules </a> </h3>
+            <h3> <a href="/trait2"> Trait 2: Worried / Reserved </a> </h3>
+            <h3> <a href="/trait3"> Trait 3: Partier / Emotionally Volatile </a> </h3>
+            <h3> <a href="/trait4"> Trait 4: Breaks Rules / Judgmental </a> </h3>
+            <h3> <a href="/trait5"> Trait 5: Angry / Judgemental / Dislikes Complex Ideas and Art </a> </h3>
+            <h3> <a href="/trait6"> Trait 6: Passive / Messy / Sees Oneself as Average </a> </h3>
+            <h3> <a href="/trait7"> Trait 7: Emotionally Open / Intellectually Thoughtful </a> </h3>
+            <h3> <a href="/trait8"> Trait 8: Reserved </a> </h3>
         </div>
 
-
-        <div class="row">
-            <div>
-                <a href="https://plot.ly/~alacrity28/26/" target="_blank" title="Factor 3: Party-er / Emotionally Volatile" style="display: block; text-align: center;"><img src="https://plot.ly/~alacrity28/26.png" alt="Factor 3: Party-er / Emotionally Volatile" style="max-width: 100%;width: 1176px;"  width="1176" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
-                <script data-plotly="alacrity28:26"  src="https://plot.ly/embed.js" async></script>
-            </div>
-        </div>
-
-        <div class="row">
-            <div>
-    <a href="https://plot.ly/~alacrity28/28/" target="_blank" title="Factor 4: Breaks Rules / Judgemental" style="display: block; text-align: center;"><img src="https://plot.ly/~alacrity28/28.png" alt="Factor 4: Breaks Rules / Judgemental" style="max-width: 100%;width: 1176px;"  width="1176" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
-    <script data-plotly="alacrity28:28"  src="https://plot.ly/embed.js" async></script>
-            </div>
-        </div>
-
-        <div class="row">
-            <div>
-                <a href="https://plot.ly/~alacrity28/30/" target="_blank" title="Factor 5: Angry / Judgmental / Dislikes Complex Ideas and Art" style="display: block; text-align: center;"><img src="https://plot.ly/~alacrity28/30.png" alt="Factor 5: Angry / Judgmental / Dislikes Complex Ideas and Art" style="max-width: 100%;width: 1176px;"  width="1176" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
-                <script data-plotly="alacrity28:30"  src="https://plot.ly/embed.js" async></script>
-            </div>
-        </div>
-
-        <div class="row">
-            <div>
-                <a href="https://plot.ly/~alacrity28/32/" target="_blank" title="Factor 6: Passive / Messy / Sees Oneself As Average" style="display: block; text-align: center;"><img src="https://plot.ly/~alacrity28/32.png" alt="Factor 6: Passive / Messy / Sees Oneself As Average" style="max-width: 100%;width: 1176px;"  width="1176" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
-                <script data-plotly="alacrity28:32"  src="https://plot.ly/embed.js" async></script>
-            </div>
-        </div>
-
-        <div class="row">
-            <div>
-                <a href="https://plot.ly/~alacrity28/34/" target="_blank" title="Factor 7: Emotionally Open / Intellectually Thoughtful" style="display: block; text-align: center;"><img src="https://plot.ly/~alacrity28/34.png" alt="Factor 7: Emotionally Open / Intellectually Thoughtful" style="max-width: 100%;width: 1176px;"  width="1176" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
-                <script data-plotly="alacrity28:34"  src="https://plot.ly/embed.js" async></script>
-            </div>
-        </div>
-
-        <div class="row">
-            <div>
-                <a href="https://plot.ly/~alacrity28/36/" target="_blank" title="Factor 8: Reserved" style="display: block; text-align: center;"><img src="https://plot.ly/~alacrity28/36.png" alt="Factor 8: Reserved" style="max-width: 100%;width: 1176px;"  width="1176" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
-                <script data-plotly="alacrity28:36"  src="https://plot.ly/embed.js" async></script>
-            </div>
-        </div>
-
-        <hr>
-
-
-        <!-- Project One: Gender -->
-        <div class="row">
-            <div class="col-md-5">
-                <h3>Personality Traits by Gender</h3>
-                <h4></h4>
-                <p></p>
-            </div>
-            <div class="col-md-7">
-                <a href="#">
-                    <img class="img-responsive" src="static/images/gender.png" alt="">
-                </a>
-            </div>
-        </div>
-
-
-        <hr>
-
-        <!-- Project Three: Age -->
-
-        <div class="row">
-            <div class="col-md-5">
-                <h3>Personality Traits by Age</h3>
-                <h4></h4>
-                <p></p>
-            </div>
-        </div>
-
-            <div class="col-md-7">
-                <a href="#">
-                    <img class="img-responsive" src="static/images/age1.png" alt="">
-                </a>
-            </div>
-            <div class="col-md-7">
-                <a href="#">
-                    <img class="img-responsive" src="static/images/age2.png" alt="">
-                </a>
-            </div>
-            <div class="col-md-7">
-                <a href="#">
-                    <img class="img-responsive" src="static/images/age3.png" alt="">
-                </a>
-            </div>
-            <div class="col-md-7">
-                <a href="#">
-                    <img class="img-responsive" src="static/images/age4.png" alt="">
-                </a>
-            </div>
-
-            <div class="col-md-7">
-                <a href="#">
-                    <img class="img-responsive" src="static/images/age5.png" alt="">
-                </a>
-            </div>
-            <div class="col-md-7">
-                <a href="#">
-                    <img class="img-responsive" src="static/images/age6.png" alt="">
-                </a>
-            </div>
-            <div class="col-md-7">
-                <a href="#">
-                    <img class="img-responsive" src="static/images/age7.png" alt="">
-                </a>
-            </div>
-            <div class="col-md-7">
-                <a href="#">
-                    <img class="img-responsive" src="static/images/age8.png" alt="">
-                </a>
-            </div>
-
-        </div>
-
-        <hr>
-
-        <hr>
-
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>~Erin Wolpert 2016</p>
-                </div>
-            </div>
-            <!-- /.row -->
-        </footer>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
 
     </div>
-    <!-- /.container -->
 
-    <!-- jQuery -->
+
     <script src="static/js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->

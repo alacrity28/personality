@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Personality ~ Erin Wolpert</title>
+    <title>Erin Wolpert</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="static/css/bootstrap.min.css" rel="stylesheet">
@@ -23,16 +23,6 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
-    <style>
-    p.test {
-        font-family: "Times New Roman", Times, serif;
-    }
-
-    p.sansserif {
-        font-family: Arial, Helvetica, sans-serif;
-    }
-    </style>
 
 </head>
 
@@ -73,45 +63,80 @@
         <!-- Page Heading -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Deriving Personality Traits with Data Science:
-                    <small></small>
+                <h1 class="page-header">NMF Analysis:
+                    <small>8 Traits By Demographic</small>
                 </h1>
             </div>
         </div>
         <!-- /.row -->
 
-        <!-- Project One -->
         <div class="row">
-            <div class="col-md-7">
-                <a href="#">
-                    <img class="img-responsive" src="static/images/big5.png" alt="" style="width:600px;height:375px;">
-                </a>
-            </div>
             <div class="col-md-5">
-                <h3>Replicating the Big Five Trait Theory</h3>
-                <p> <a href="https://en.wikipedia.org/wiki/Big_Five_personality_traits"> Big Five Trait Theory </a> is a well-replicated personality trait theory. In this section I explain my research design in applying <a href="https://en.wikipedia.org/wiki/Non-negative_matrix_factorization"> Non-Negative Matrix Factorization </a> to replicate Big Five on a large personality data set.</p>
-                <a class="btn btn-primary" href= "/bigfive" >View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
+                <h3>Trait 1: Social / Respects Rules </h3>
             </div>
         </div>
+
+        <hr>
+
         <!-- /.row -->
 
         <hr>
 
-        <!-- Project Two -->
+
+        <!-- Country -->
         <div class="row">
-            <div class="col-md-7">
-                <a href="#">
-                    <img class="img-responsive" src="static/images/front_map.png" alt="" style="width:600px;height:375px;">
-                </a>
-            </div>
             <div class="col-md-5">
-                <h3>Personality by Demographic</h3>
-                <p>The ideal number of personality traits was explored, to obtain a personality trait theory which maintained both internal and external category consistency while also pulling non-trivial personality traits from the data.
-                    The resulting 8 personality traits from this method are dissected by country, age, and gender. </p>
-                <a class="btn btn-primary" href= "/generalanalysis">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
+                <h3>Personality Traits By Country</h3>
             </div>
         </div>
-        <!-- /.row -->
+
+        <div class="row">
+            <div>
+    <a href="https://plot.ly/~alacrity28/38/" target="_blank" title="Factor 1: Social / Respects Rules" style="display: block; text-align: center;"><img src="https://plot.ly/~alacrity28/38.png" alt="Factor 1: Social / Respects Rules" style="max-width: 100%;width: 1176px;"  width="1176" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <script data-plotly="alacrity28:38"  src="https://plot.ly/embed.js" async></script>
+            </div>
+        </div>
+
+
+        <!-- Gender -->
+        <div class="row">
+            <div class="col-md-5">
+                <h3>Personality Traits by Gender</h3>
+                <h4></h4>
+                <p></p>
+            </div>
+            <div class="col-md-7">
+                <a href="#">
+                    <img class="img-responsive" src="static/images/gender.png" alt="">
+                </a>
+            </div>
+        </div>
+
+
+        <hr>
+
+        <!-- Project Three: Age -->
+
+        <div class="row">
+            <div class="col-md-5">
+                <h3>Personality Traits by Age</h3>
+                <h4></h4>
+                <p></p>
+            </div>
+        </div>
+
+            <div class="col-md-7">
+                <a href="#">
+                    <img class="img-responsive" src="static/images/age1.png" alt="">
+                </a>
+            </div>
+
+        </div>
+
+        <hr>
+
+        <hr>
+
 
     </div>
     <!-- /.container -->

@@ -45,10 +45,10 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="/">Portfolio</a>
+                        <a href="/github">GitHub</a>
                     </li>
                     <li>
-                        <a href="/about">About</a>
+                        <a href="/linkedin">LinkedIn</a>
                     </li>
                 </ul>
             </div>
@@ -77,7 +77,7 @@
 
                 <br>
 
-                <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Trait theory is the idea that human personality can be described as set number of factors.  Big Five trait theory is one of the
+                <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Trait theory is the idea that human personality can be described as set number of factors.  Big Five trait theory is one of the
                     most scientifically respected trait theories because it has been replicated many times over different studies.  It proposes the following
                     dissection of human behavior:</p>
                 <li> Openness to Experience </li>
@@ -106,7 +106,7 @@
 
                 <br>
 
-                <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Non-negative matrix factorization (NMF) is a method of dimension reduction which operates on exclusively positive data and decomposes the original data in to two smaller, positive matricies.
+                <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Non-negative matrix factorization (NMF) is a method of dimension reduction which operates on exclusively positive data and decomposes the original data in to two smaller, positive matricies.
                 As an algorithm, it is especially well-suited for situations where one needs interpretable results because it outputs only positive values. One major draw back of the method is that it does not
                 produce a unique solution, instead it produces many approximate decompositions to the original matrix.
                 This means that everytime you run the algorithm, it produces a different, yet equally true solution (to all other solutions that it gives).
@@ -115,7 +115,7 @@
 
                 <br>
 
-                <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; While NMF was the final algorithm choosen, I also tried other matrix factorizations including singular value decomposition, independent component anlysis and principal component analysis.
+                <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;While NMF was the final algorithm choosen, I also tried other matrix factorizations including singular value decomposition, independent component anlysis and principal component analysis.
                     These methods allow for negative values in the resulting matricies which changes the interpretation of the problem and raises questions like "What does it mean to have a negative value on a "likes to party" trait?".
                     While the concept of being rated "zero" on "likes to party" makes contextual sense, negative values arguably make sense.  The benefit of other methods is that they produce unique solutions,
                     but as I found in my analysis the personality categories from these analyses consistently made less sense than those that NMF produced.  SVD, ICA and PCA generally produced results that were less internally consistent (the test questions within a trait varied more widely)
@@ -125,7 +125,7 @@
                 <br>
 
                 <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I attempted to find a method to get a unique solution from Non-Negative Matrix Factorization.  While some theoretical papers show that it is possible under some very specific conditions,
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I attempted to find a method to get a unique solution from Non-Negative Matrix Factorization.  While some theoretical papers show that it is possible under some very specific conditions,
                     they weren't relevant or practical for the scope of this project. Instead, I borrowed the concepts of aggregating and boosting from random forests to create an ensemble NMF.
                     I ran 1000 iterations of nmf, keeping only the top questions associated with each of the five factors in each iteration.
                     A "master" factor dictionary stored the top questions for each factor and with each iteration, I matched each new factors's top
@@ -149,7 +149,7 @@
                 <br>
                 <br>
 
-                <p>The ensemble NMF produced three factors that mapped back to the Big Five Trait theory.
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The ensemble NMF produced three factors that mapped back to the Big Five Trait theory.
                     "Not open to new ideas" seems to be very close to "open to new experiences" except that it measures the trait in the opposite direction.
                     Interestingly, "alone" and "social / people-oriented" could be thought of as being on opposite scales of "extraversion" so
                     for both of them to show up in the factorization might imply that social level is a pretty signficant factor in categorizing human behavior.
@@ -162,21 +162,10 @@
 
         <div>
 
-
-
         </div>
 
         <hr>
 
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>~Erin Wolpert 2016</p>
-                </div>
-            </div>
-            <!-- /.row -->
-        </footer>
 
     </div>
     <!-- /.container -->
